@@ -82,7 +82,7 @@ address {
   line-height: 1.14em;
   letter-spacing: 0.02em;
   font-style: normal;
-  padding-bottom: 29px;
+  padding-bottom: 32px;
 }
 
 .link {
@@ -94,10 +94,27 @@ address {
 .nav:hover,
 .nav:focus {
   color: var(--accent-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-border:hover {
+
+.nav-border {
+  display: inline-block;
+  position: relative;
+}
+/* .nav-border:hover {
   border-bottom: 4px solid;
   border-radius: 2px;
+} */
+.nav-border:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .name {
@@ -147,6 +164,7 @@ address {
 .knock:hover,
 :focus {
   background-color: var(--text-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* .knock > .sent {
   width: 20px;
@@ -233,6 +251,7 @@ footer {
 .cursor:focus {
   background-color: var(--accent-color);
   color: var(--second-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon {
   font-size: 18px;
@@ -370,6 +389,7 @@ footer {
 }
 .addres:hover .icon-vectorsmartphone {
   --color2: var(--accent-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-envelope {
@@ -378,6 +398,7 @@ footer {
 }
 .addres:hover .icon-envelope {
   --color2: var(--accent-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* .icon-Client1 {
@@ -534,20 +555,24 @@ footer {
 .box-social:hover .icon-instagram2 {
   --color1: var(--second-color);
   background-color: var(--accent-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .box-social:hover .icon-twitter1 {
   --color1: var(--second-color);
   background-color: var(--accent-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .box-social:hover .icon-facebook1 {
   --color1: var(--second-color);
   background-color: var(--accent-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .box-social:hover .icon-linkedin1 {
   --color1: var(--second-color);
   background-color: var(--accent-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .white-style {
   --color1: var(--second-color);
@@ -571,6 +596,7 @@ footer {
   --color1: var(--accent-color);
   background-color: var(--second-color);
   border: 1px solid var(--accent-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .last:not(:last-child) {
   margin-right: 30px;
@@ -649,40 +675,42 @@ footer {
   align-items: flex-end;
   justify-content: center;
 }
-.our-work-opacity {
-  position: relative;
-
-  /*   display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  background-color: var(--accent-color); */
-}
 .opacity-none {
   display: none;
 }
+.our-work-opacity {
+  position: relative;
+  overflow: hidden;
+}
 
-.our-work-opacity::before {
+/* .our-work-opacity::before {
   position: absolute;
   content: '';
   width: 100%;
   height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
   opacity: 0;
-}
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(270px);
+} */
 
-.our-work-opacity:hover::before {
-  opacity: 1;
-}
 .opacity {
   display: flex;
   font-size: 18px;
   line-height: 28px;
   font-weight: normal;
   letter-spacing: 0.03em;
-  padding: 60px 23px;
+  padding: 63px 23px;
   opacity: 0;
   position: absolute;
+  background-color: rgba(33, 150, 243, 0.9);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(270px);
+  /* transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
-.opacity:hover {
+
+.our-work-opacity:hover .opacity {
   opacity: 1;
+  transform: translateY(calc(-100% + 290px));
 }
