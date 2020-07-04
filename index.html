@@ -56,6 +56,17 @@
         </nav>
       </header>
 
+      <!-- модальное окно -->
+
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit adipisci nobis laboriosam delectus fuga cupiditate. Laborum impedit neque commodi dicta sit rem officiis placeat, accusamus id, reiciendis, dolorum dolores asperiores.
+          </p>
+          <button data-modal-close>Закрыть</button >
+        </div>
+      </div>
+
       <!-- основной контент -->
       <main>
         <!-- первый блок_герой -->
@@ -69,7 +80,7 @@
                     Эффективные решения <br />
                     для вашего бизнеса
                   </h1>
-                  <a href="" class="knock">Заказать услугу</a>
+                  <a data-modal-open href="#" class="knock">Заказать услугу</a>
                 </div> 
               </div>
             </div>
@@ -534,5 +545,7 @@
         </div>
       </footer>
     </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
