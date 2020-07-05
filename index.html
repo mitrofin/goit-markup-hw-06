@@ -63,27 +63,34 @@
           <form class="speaker-form" >
             <h3 class="modal-title">Оставьте свои данные, мы вам перезвоним</h3>
             <div class="form-field">
-              <label>Имя
-                <input type="text" name="name">
+              <label><!-- Имя -->
+                <input class="form-input" type="text" name="name">
               </label>
             </div>  
-            <div class="form-field">
-              <label>Телефон
-                <input type="tel" name="name">
+            <div >
+              <label class="form-field">
+                <input class="form-input" type="tel" name="name" autocomplete="off">
+                <span class="form-label">Телефон</span>
+                <svg class="form-icon" width="18px" height="18px">
+                  <use href="./images/sprite.svg#phone-black"></use>
+                </svg>
+                <!-- <span class="form-icon"></span> -->
               </label>
             </div>
             <div class="form-field">
-              <label>Почта
-                <input type="email" name="name">
+              <label><!-- Почта -->
+                <input class="form-input" type="email" name="name">
               </label>
             </div>
             <div class="form-field">
-              <label for="coment">Комментарий</label>
-              <textarea name="" id="coment" cols="20" rows="10"></textarea>
+              <label for="coment"><!-- Комментарий --></label>
+              <textarea class="textarea-input" name="" id="coment" cols="20" rows="10"></textarea>
             </div>
-            <input type="checkbox" name="agry" value="agry" id="agry">
-            <label for="agry">Соглашаюсь с рассылкой и принимаю <a  class="accent" href="">Условия договора</a> </label>
-            <button class="knock " type="submit">Отправить</button>
+            <div class="send-field">
+              <input class="" type="checkbox" name="agry" value="agry" id="agry">
+              <label for="agry">Соглашаюсь с рассылкой и принимаю <a  class="accent agry" href="">Условия договора</a> </label>
+              <button class="knock " type="submit">Отправить</button>
+            </div>
             
           </form>
           <button class="close" data-modal-close>
