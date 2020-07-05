@@ -60,10 +60,37 @@
 
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit adipisci nobis laboriosam delectus fuga cupiditate. Laborum impedit neque commodi dicta sit rem officiis placeat, accusamus id, reiciendis, dolorum dolores asperiores.
-          </p>
-          <button data-modal-close>Закрыть</button >
+          <form class="speaker-form" >
+            <h3>Оставьте свои данные, мы вам перезвоним</h3>
+            <div class="form-field">
+              <label>Имя
+                <input type="text" name="name">
+              </label>
+            </div>  
+            <div class="form-field">
+              <label>Телефон
+                <input type="tel" name="name">
+              </label>
+            </div>
+            <div class="form-field">
+              <label>Почта
+                <input type="email" name="name">
+              </label>
+            </div>
+            <div class="form-field">
+              <label for="coment">Комментарий</label>
+              <textarea name="" id="coment" cols="20" rows="10"></textarea>
+            </div>
+            <input type="checkbox" name="agry" value="agry" id="agry">
+            <label for="agry">Соглашаюсь с рассылкой и принимаю Условия договора</label>
+            <button class="knock" type="submit"> Отправить</button>
+            
+          </form>
+          <button class="close" data-modal-close>
+            <svg class="close-icon" width="18px" height="18px" >
+              <use href="./image/close.svg"></use>
+            </svg>
+          </button >
         </div>
       </div>
 
