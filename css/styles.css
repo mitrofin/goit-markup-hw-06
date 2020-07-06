@@ -984,7 +984,7 @@ footer {
   background-origin: content-box;
   cursor: pointer;
 }
-.checkbox:focus::after {
-  outline-color: transparent;
-  outline-style: none;
+
+input:focus {
+  outline: none;
 }
