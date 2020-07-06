@@ -62,33 +62,42 @@
         <div class="modal">
           <form class="speaker-form" >
             <h3 class="modal-title">Оставьте свои данные, мы вам перезвоним</h3>
-            <div class="form-field">
-              <label><!-- Имя -->
-                <input class="form-input" type="text" name="name">
-              </label>
-            </div>  
-            <div >
+            
               <label class="form-field">
-                <input class="form-input" type="tel" name="name" autocomplete="off">
+                <input class="form-input" type="tel" name="name" autocomplete="off"placeholder=" ">
+                <span class="form-label">Имя</span>
+                <svg class="form-icon" width="18px" height="18px">
+                  <use href="./images/sprite.svg#person-black"></use>
+                </svg>
+                <!-- <span class="form-icon"></span> -->
+              </label>
+            
+            
+              <label class="form-field">
+                <input class="form-input" type="tel" name="name" autocomplete="off" placeholder=" ">
                 <span class="form-label">Телефон</span>
                 <svg class="form-icon" width="18px" height="18px">
                   <use href="./images/sprite.svg#phone-black"></use>
                 </svg>
                 <!-- <span class="form-icon"></span> -->
               </label>
-            </div>
-            <div class="form-field">
-              <label><!-- Почта -->
-                <input class="form-input" type="email" name="name">
-              </label>
-            </div>
-            <div class="form-field">
-              <label for="coment"><!-- Комментарий --></label>
-              <textarea class="textarea-input" name="" id="coment" cols="20" rows="10"></textarea>
-            </div>
+            
+            <label class="form-field">
+              <input class="form-input" type="tel" name="name" autocomplete="off" placeholder=" ">
+              <span class="form-label">Почта</span>
+              <svg class="form-icon" width="18px" height="18px">
+                <use href="./images/sprite.svg#phone-black"></use>
+              </svg>
+              <!-- <span class="form-icon"></span> -->
+            </label>
+            <label class="form-field textarea">
+              <textarea class="textarea-input" name="" id="coment" placeholder=" " cols="20" rows="10"></textarea>
+              <span class="form-label">Комментарий</span>
+            </label>
             <div class="send-field">
-              <input class="" type="checkbox" name="agry" value="agry" id="agry">
-              <label for="agry">Соглашаюсь с рассылкой и принимаю <a  class="accent agry" href="">Условия договора</a> </label>
+              <input class="checkbox" type="checkbox" name="agry" value="agry" id="agry" >
+              <!-- <span class="checkbox-icon"></span> -->
+              <label class="send-label" for="agry">Соглашаюсь с рассылкой и принимаю <a  class="accent agry" href="">Условия договора</a> </label>
               <button class="knock " type="submit">Отправить</button>
             </div>
             

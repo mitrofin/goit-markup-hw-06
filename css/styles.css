@@ -835,6 +835,7 @@ footer {
   height: 18px;
   background-image: url(../images/close.svg);
   background-size: contain;
+  background-position: center;
   transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close:hover::after {
@@ -842,6 +843,7 @@ footer {
   width: 18px;
   height: 18px;
   background-image: url(../images/close2.svg);
+  background-position: center;
   background-size: contain;
 }
 
@@ -872,10 +874,10 @@ footer {
   text-decoration: underline;
 }
 
-.form-field textarea {
+/* .form-field textarea {
   padding: 12px;
   /* background-color: #757575; */
-}
+} */
 
 .send-field {
   margin-top: 20px;
@@ -898,7 +900,8 @@ footer {
   transform: translateY(-50%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-field:focus-within > .form-label {
+.form-field:focus-within > .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
   transform: translateY(-45px) translateX(-20px);
   color: var(--accent-color);
 }
@@ -921,4 +924,67 @@ footer {
 }
 .form-field:focus-within {
   border-color: var(--accent-color);
+}
+.textarea {
+  height: 120px;
+}
+.textarea-input:focus {
+  outline: none;
+}
+.textarea-input {
+  border-width: 0;
+}
+.textarea > .form-label {
+  position: absolute;
+  top: 15%;
+  left: 2x;
+  transform: translateY(-50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-title{
+  margin: 0;
+}
+
+.send-label {
+  display: inline-block;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.form-field:focus-within > .form-label,
+.textarea-input:not(:placeholder-shown) + .form-label {
+  transform: translateY(-45px) translateX(-20px);
+  color: var(--accent-color);
+}
+.checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+ 
+}
+.checkbox::after {
+  content: "";
+  display: flex;
+  width: 16px;
+  height: 15px;
+  background: #FFFFFF;
+  /* background-image: url(../images/cub.svg);
+  background-size: contain;
+  background-position: center; */
+  border: 2px solid var(--main-color);
+  border-radius: 4px;
+  /* outline:transparent; */
+  
+}
+.checkbox:checked::after {
+  border-color: transparent;
+  background-color: var(--accent-color);
+  background-image: url(../images/check.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  cursor: pointer;
+}
+.checkbox:focus::after {
+  outline-color: transparent;
+  outline-style: none;
 }
