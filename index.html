@@ -63,19 +63,19 @@
           <form class="speaker-form" >
             <h3 class="modal-title">Оставьте свои данные, мы вам перезвоним</h3>
             
-              <label class="form-field">
-                <input class="form-input" type="tel" name="name" autocomplete="off"placeholder=" ">
-                <span class="form-label">Имя</span>
+              <div class="form-field">
+                <input class="form-input" type="tel" name="name" id="name" autocomplete="off"placeholder=" ">
+                <label for="name" class="form-label">Имя</label>
                 <svg class="form-icon" width="18px" height="18px">
                   <use href="./images/sprite.svg#person-black"></use>
                 </svg>
                 <!-- <span class="form-icon"></span> -->
-              </label>
+              </div>
             
             
               <div class="form-field">
-                <input class="form-input" type="tel" name="name" autocomplete="off" placeholder=" ">
-                <label class="form-label">Телефон</label>
+                <input class="form-input" type="tel" name="tel" id="tel" autocomplete="off" placeholder=" ">
+                <label for="tel" class="form-label">Телефон</label>
                 <svg class="form-icon" width="18px" height="18px">
                   <use href="./images/sprite.svg#phone-black"></use>
                 </svg>
@@ -83,9 +83,9 @@
               </div>
             
             <div class="form-field">
-              <input class="form-input" type="tel" name="name" autocomplete="off" placeholder=" ">
-              <label class="form-label">Почта</label>
-              <svg class="form-icon" width="18px" height="18px">
+              <input class="form-input" type="tel" name="input" id="mail" autocomplete="off" placeholder=" ">
+              <label for="mail" class="form-label">Почта</label>
+              <svg class="form-icon" id="mail" width="18px" height="18px">
                 <use href="./images/sprite.svg#email-black"></use>
               </svg>
               <!-- <span class="form-icon"></span> -->
@@ -93,7 +93,7 @@
             
             <div class="form-field textarea">
               <textarea class="textarea-input" name="" id="coment" placeholder=" " cols="20" rows="10"></textarea>
-              <label class="form-label">Комментарий</label>
+              <label for="coment" class="form-label">Комментарий</label>
             </div>
 
             <div class="send-field">
